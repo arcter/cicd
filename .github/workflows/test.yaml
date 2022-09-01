@@ -1,0 +1,13 @@
+name: Test actions
+
+on:
+  push:
+
+jobs:
+  build-go:
+    runs-on: self-hosted
+    steps:
+      - name: Run go uild
+        run: |
+          go build -o ./build
+        working-directory: ./
